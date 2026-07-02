@@ -86,6 +86,7 @@ img { display: block; max-width: 100%; }
 
 .hero {
   min-height: calc(100vh - var(--nav-h));
+  min-height: calc(100dvh - var(--nav-h));
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -592,6 +593,8 @@ img { display: block; max-width: 100%; }
   background: linear-gradient(135deg, #fce7f3, #fff1f2 50%, #fdf2f8);
   opacity: 0;
   visibility: hidden;
+  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 .celebration.active {
@@ -608,7 +611,7 @@ img { display: block; max-width: 100%; }
   opacity: var(--opacity);
   transform-origin: center;
   animation: real-flower-fall var(--duration) linear var(--delay) infinite;
-  filter: saturate(1.08) brightness(1.04) drop-shadow(0 8px 8px rgba(74,16,42,0.2));
+  filter: saturate(1.05) drop-shadow(0 5px 5px rgba(74,16,42,0.16));
   will-change: transform;
 }
 
@@ -723,7 +726,10 @@ footer {
 /* ─── RESPONSIVE ──────────────────────────────────────── */
 
 @media (max-width: 720px) {
-  .site-nav { padding: 0 1rem; }
+  .site-nav {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
 
   .nav-links {
     gap: 0;
@@ -738,6 +744,37 @@ footer {
   .photo-gallery { columns: 2 140px; column-gap: 0.75rem; }
 
   .proposal-wrap { height: 250px; }
+
+  .hero {
+    padding: 2.5rem max(1rem, env(safe-area-inset-left)) calc(4.5rem + env(safe-area-inset-bottom));
+  }
+
+  .real-flower { top: -25vh; }
+
+  .celebration-ring {
+    top: 42%;
+    width: min(68vw, 310px);
+    max-height: 44dvh;
+    border-radius: 24px;
+    padding: 7px;
+  }
+
+  .celebration-content {
+    bottom: calc(3.5rem + env(safe-area-inset-bottom));
+    gap: 0.75rem;
+    width: min(92vw, 420px);
+  }
+
+  .celebration-note {
+    padding: 0.75rem 1rem;
+    line-height: 1.45;
+  }
+
+  .celebration-btn {
+    min-height: 48px;
+    padding: 0.7rem 1.2rem;
+    text-align: center;
+  }
 
   .timeline::before { left: calc(1rem + 20px); }
   .timeline { padding: 0 1rem; }
@@ -903,5 +940,16 @@ footer {
 
 @media (max-width: 480px) {
   .music-label { display: none; }
-  .music-player { padding: 0.5rem; }
+  .music-player {
+    right: max(0.75rem, env(safe-area-inset-right));
+    bottom: max(0.75rem, env(safe-area-inset-bottom));
+    padding: 0.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .real-flower:nth-child(n + 13) { display: none; }
+  .real-flower { animation-duration: 14s; }
+  .celebration-ring { animation: ring-pop 0.6s ease-out forwards; }
+  .celebration-content { animation-delay: 0.7s; }
 }

@@ -80,16 +80,26 @@ if (proposalActions && yesButton && noButton && proposalResult && celebration) {
     yesButton.textContent = 'lop u so muchie baby ❤️';
     noButton.hidden = true;
     celebration.classList.add('active');
+    celebration.setAttribute('aria-hidden', 'false');
 
     if (!celebration.hasChildNodes()) {
-      for (let i = 0; i < 360; i++) {
+      // Hundreds of large animated PNGs exhaust Mobile Safari's graphics memory.
+      // Keep the effect full enough visually while respecting smaller devices.
+      const isPhone = window.matchMedia('(max-width: 720px)').matches;
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const flowerCount = reduceMotion ? 12 : (isPhone ? 24 : 56);
+      const flowers = document.createDocumentFragment();
+
+      for (let i = 0; i < flowerCount; i++) {
         const isLily = i % 2 === 0;
         const flower = document.createElement('img');
         flower.className = `real-flower ${isLily ? 'lily' : 'babys-breath'}`;
         flower.src = isLily ? 'assets/pink-lily.png' : 'assets/pink-babys-breath-bouquet.png';
         flower.alt = '';
         flower.style.setProperty('--left',           `${-18 + Math.random() * 118}%`);
-        flower.style.setProperty('--size',           isLily ? `${125 + Math.random() * 185}px` : `${130 + Math.random() * 190}px`);
+        const baseSize = isPhone ? 72 : 105;
+        const sizeRange = isPhone ? 78 : 125;
+        flower.style.setProperty('--size',           `${baseSize + Math.random() * sizeRange}px`);
         flower.style.setProperty('--opacity',        `${0.76 + Math.random() * 0.24}`);
         flower.style.setProperty('--duration',       `${7 + Math.random() * 7}s`);
         flower.style.setProperty('--delay',          `${Math.random() * -15}s`);
@@ -98,8 +108,10 @@ if (proposalActions && yesButton && noButton && proposalResult && celebration) {
         flower.style.setProperty('--mid-drift',      `${drift * -0.35}px`);
         flower.style.setProperty('--start-rotation', `${Math.random() * 180}deg`);
         flower.style.setProperty('--end-rotation',   `${360 + Math.random() * 540}deg`);
-        celebration.appendChild(flower);
+        flowers.appendChild(flower);
       }
+
+      celebration.appendChild(flowers);
 
       const ring = document.createElement('img');
       ring.className = 'celebration-ring';
