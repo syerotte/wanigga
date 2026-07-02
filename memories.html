@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memories • wanigga 💌</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+
+    <nav class="site-nav">
+      <a href="index.html" class="brand">wanigga 💌</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="story.html">Our Story</a>
+        <a href="memories.html" class="active">Memories</a>
+        <a href="reasons.html">Why You</a>
+        <a href="letter.html">Love Note</a>
+      </div>
+    </nav>
+
+    <main class="page-main memories-section" style="padding-bottom:5rem;">
+
+      <div class="page-intro">
+        <p class="kicker">GAY LERRY</p>
+        <h1>GAAAAYYYY LEERRYYYY KITAAAA 🎀</h1>
+        <p>bukti u cantik menawan anggun ayu wanita melayu pertama.</p>
+      </div>
+
+      <!-- VIDEO -->
+      <figure class="video-memory-card">
+        <div class="video-shell">
+          <video controls playsinline preload="metadata">
+            <source src="assets/WhatsApp Video 2026-07-02 at 11.49.51 PM.mp4" type="video/mp4" />
+            Your browser does not support this video.
+          </video>
+        </div>
+        <figcaption>om nyom nyomnyom dapnya dia makan, u makan banyak pon i still sayang u cuma nanti i ajak u exercise sekali la hihi</figcaption>
+      </figure>
+
+      <!-- GALLERY -->
+      <div class="photo-gallery" id="photo-gallery"></div>
+
+    </main>
+
+    <footer>
+      <p>© <span id="year"></span> Our tiny archive ♡</p>
+    </footer>
+
+    <!-- AUDIO -->
+    <audio id="bg-audio" loop>
+      <source src="assets/music/Taylor Swift - Wish List (Lyrics).mp3" type="audio/mpeg" />
+    </audio>
+
+    <!-- MUSIC PLAYER -->
+    <div class="music-player" id="music-player">
+      <button class="music-btn" id="music-btn" aria-label="Play music">
+        <span class="music-icon" id="music-icon">▶</span>
+      </button>
+      <div class="music-label">
+        <span class="music-title">Wish List</span>
+        <span class="music-artist">Taylor Swift</span>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

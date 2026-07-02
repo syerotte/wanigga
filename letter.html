@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Love Note • wanigga 💌</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .letter-page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: calc(100vh - 64px - 72px);
+      }
+      .letter-page .page-intro { margin-bottom: 2rem; }
+    </style>
+  </head>
+  <body>
+
+    <nav class="site-nav">
+      <a href="index.html" class="brand">wanigga 💌</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="story.html">Our Story</a>
+        <a href="memories.html">Memories</a>
+        <a href="reasons.html">Why You</a>
+        <a href="letter.html" class="active">Love Note</a>
+      </div>
+    </nav>
+
+    <main class="page-main letter-page">
+
+      <div class="page-intro">
+        <p class="kicker">No memes for one second</p>
+        <h1>One last thing… 💌</h1>
+      </div>
+
+      <section class="paper-card love-letter" style="max-width:680px;">
+        <span class="paper-tape"></span>
+
+        <p>My Dearest Wany. I couldn't sleep last night because I know that it's not over between us. I'm not bitter anymore, because I know that what we had was real (iykyk),</p>
+        <p>
+          i don’t really know how to write this properly, but i just want to be honest with you.
+we’ve had our ups and downs, and i know things were never perfect. both of us have flaws, both of us have made mistakes, and both of us still have a lot to learn. but that’s the thing… i bukannya nak u punya good side only. i appreciate ur flaws also, because that’s what makes u pwetty baby.
+
+i really hope one day, after both of us improve ourselves and become better, Allah will meet us again in the best way, at the right time, when we’re both in our prime. i hope you jaga solat, jaga diri, chase whatever dreams you want, and become the person you always wanted to be.
+
+i hope that you’ll be the one by my side sampai tua. main ps5 sama-sama, masak sama-sama, do simple things together, go through life together. i know it sounds funny, but i really do want that kind of future. and yes, i still want 9 kids so we can make one football team mueheheheheh.
+
+i want to taste all your cooking, take care of you when you’re tired, support you when life gets hard, and be there when you need someone. but more than anything, i want you to be happy and safe, even if life takes us on different paths for now.
+
+i’m really sorry for all my faults. i know i’ve done a lot of wrong things, and i hope you can forgive me for all my faults. 
+
+kalau ada apa-apa, anything at all, just tell me okay. i’m always here for you, roger je belakang sampai. kita kasi problem tu faham. kasi paham bos bos bos.
+
+semoga you sentiasa berada dalam jagaan allah, dilindungi, dipermudahkan urusan, and given all the happiness you deserve.
+
+take care always, baby wany cayang comel ucuk acam.
+
+i really hope allah pertemukan kita again nanti, in a better version of ourselves. amin.
+        </p>
+        <p class="letter-signoff">Always yours ❤️</p>
+
+        <div style="margin-top:2rem; position:relative; z-index:2;">
+          <button class="btn btn-primary" id="surprise-btn" type="button">Tap for one more thing 🌸</button>
+          <p id="surprise-message" class="surprise-message" aria-live="polite"></p>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- CINCIN POPUP MODAL -->
+    <div class="cincin-backdrop" id="cincin-backdrop" aria-hidden="true">
+      <div class="cincin-modal">
+        <button class="cincin-close" id="cincin-close" aria-label="Close">&times;</button>
+        <img src="assets/cincin.jpeg" alt="Paper ring for you" class="cincin-img" />
+        <p class="cincin-note">this paper ring is just for u baby 💍🤍</p>
+      </div>
+    </div>
+
+    <footer>
+      <p>© <span id="year"></span> Made with a ridiculous amount of love ♡</p>
+    </footer>
+
+    <!-- AUDIO -->
+    <audio id="bg-audio" loop>
+      <source src="assets/music/the notebook - noah's last letter.mp3" type="audio/mpeg" />
+    </audio>
+
+    <!-- MUSIC PLAYER -->
+    <div class="music-player" id="music-player">
+      <button class="music-btn" id="music-btn" aria-label="Play music">
+        <span class="music-icon" id="music-icon">▶</span>
+      </button>
+      <div class="music-label">
+        <span class="music-title">Noah's Last Letter</span>
+        <span class="music-artist">The Notebook</span>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

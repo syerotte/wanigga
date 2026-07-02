@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Why You • wanigga 💌</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .reasons-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 1.1rem;
+        max-width: 960px;
+        margin: 0 auto 4rem;
+        padding: 0 1.5rem;
+      }
+
+      .reason-card {
+        background: white;
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        padding: 1.6rem 1.4rem;
+        box-shadow: 0 10px 28px var(--shadow);
+        transition: transform 0.22s ease, box-shadow 0.22s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .reason-card::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, var(--accent-light), var(--accent));
+        border-radius: 20px 20px 0 0;
+      }
+
+      .reason-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 44px rgba(155,75,105,0.22);
+      }
+
+      .reason-icon {
+        font-size: 2rem;
+        margin-bottom: 0.7rem;
+        line-height: 1;
+      }
+
+      .reason-card h3 {
+        font-family: 'Lora', serif;
+        font-size: 1.05rem;
+        color: var(--accent-dark);
+        margin: 0 0 0.5rem;
+      }
+
+      .reason-card p {
+        font-size: 0.92rem;
+        color: var(--text-soft);
+        margin: 0;
+        line-height: 1.6;
+      }
+
+      .reason-number {
+        position: absolute;
+        top: 1rem;
+        right: 1.1rem;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        color: var(--accent-light);
+      }
+
+      .big-reason {
+        max-width: 960px;
+        margin: 0 auto 1.5rem;
+        padding: 0 1.5rem;
+      }
+
+      .big-reason-card {
+        background: linear-gradient(135deg, #fce8f0, #fff8fb);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: 2.5rem 2rem;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        box-shadow: 0 14px 40px var(--shadow);
+      }
+
+      .big-reason-card .big-icon {
+        font-size: 3.5rem;
+        flex-shrink: 0;
+      }
+
+      .big-reason-card h3 {
+        font-family: 'Lora', serif;
+        font-size: 1.35rem;
+        color: var(--accent-dark);
+        margin: 0 0 0.5rem;
+      }
+
+      .big-reason-card p {
+        color: var(--text-soft);
+        margin: 0;
+        font-size: 0.98rem;
+        line-height: 1.7;
+      }
+
+      .counter-banner {
+        max-width: 960px;
+        margin: 0 auto 3.5rem;
+        padding: 0 1.5rem;
+        text-align: center;
+      }
+
+      .counter-banner p {
+        display: inline-block;
+        background: var(--accent);
+        color: white;
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        padding: 0.5rem 1.4rem;
+        border-radius: 999px;
+      }
+
+      @media (max-width: 600px) {
+        .big-reason-card {
+          flex-direction: column;
+          text-align: center;
+          padding: 1.75rem 1.25rem;
+          gap: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <nav class="site-nav">
+      <a href="index.html" class="brand">wanigga 💌</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="story.html">Our Story</a>
+        <a href="memories.html">Memories</a>
+        <a href="reasons.html" class="active">Why You</a>
+        <a href="letter.html">Love Note</a>
+      </div>
+    </nav>
+
+    <main class="page-main">
+
+      <div class="page-intro">
+        <p class="kicker">senarai tak lengkap</p>
+        <h1>kenapa u? 🥰</h1>
+        <p>banyak sangat sebab, tapi ni antara yang paling penting.</p>
+      </div>
+
+      <!-- REASON CARDS GRID -->
+      <div class="reasons-grid">
+
+        <article class="reason-card">
+          <span class="reason-number">#01</span>
+          <div class="reason-icon">�</div>
+          <h3>senyum u tu</h3>
+          <p>bila u senyum, i rasa macam semua benda okay balik. tak perlu words, senyum tu je dah cukup buat i rasa tenang.</p>
+        </article>
+
+        <article class="reason-card">
+          <span class="reason-number">#02</span>
+          <div class="reason-icon">💗</div>
+          <h3>hati u yang baik</h3>
+          <p>u selalu care pasal orang sekeliling u, even bila u sendiri penat. that kind of heart is rare, and i notice it every single time.</p>
+        </article>
+
+        <article class="reason-card">
+          <span class="reason-number">#03</span>
+          <div class="reason-icon">🤭</div>
+          <h3>keweirdoan u</h3>
+          <p>u kelakar la bagi seoarang perempuan.tak ada perempuan sekelakar u. i suka that side of u so much.</p>
+        </article>
+
+        <article class="reason-card">
+          <span class="reason-number">#04</span>
+          <div class="reason-icon">🫂</div>
+          <h3>u buat i rasa selamat</h3>
+          <p>dengan u, i tak perlu pretend jadi orang lain. i boleh jadi diri sendiri sepenuhnya, and that means the world to me.</p>
+        </article>
+
+        <article class="reason-card">
+          <span class="reason-number">#05</span>
+          <div class="reason-icon">🌙</div>
+          <h3>late night talks kita</h3>
+          <p>hmmm i really miss kita punya sleepcall everyday spend time masa bershama shama. those are my favorite moments with u.</p>
+        </article>
+
+        <article class="reason-card">
+          <span class="reason-number">#06</span>
+          <div class="reason-icon">✨</div>
+          <h3>u tak minus aura</h3>
+          <p>idk but i think u lain dari yang lain, i mean like ur vibe and mindset u tak sama cam most of women. and thats a good thang.</p>
+        </article>
+
+        <article class="reason-card">
+          <span class="reason-number">#07</span>
+          <div class="reason-icon">🎀</div>
+          <h3>taste u in everything</h3>
+          <p>dari cara u dress, lagu u dengar, sampai benda kecil u suka, u ada sense yang i admire. it's very attractive ngl.</p>
+        </article>
+
+        <article class="reason-card">
+          <span class="reason-number">#08</span>
+          <div class="reason-icon">�</div>
+          <h3>u wangi</h3>
+          <p>this is very important. u memang wangi and i tak tau macam mana nak explain tapi it's i hanyut dalam kewangian tu om nyom nyoom nyom.</p>
+        </article>
+
+        <article class="reason-card">
+          <span class="reason-number">#09</span>
+          <div class="reason-icon">🤝</div>
+          <h3>u always show up</h3>
+          <p>u always be ada everytime i need u. walaupun u tengah ngantuk or busy. really appreciate that</p>
+        </article>
+
+        <article class="reason-card">
+          <span class="reason-number">#10</span>
+          <div class="reason-icon">🧠</div>
+          <h3>u smart and deep</h3>
+          <p>u fikir pasal benda lebih dalam dari orang lain sedar. borak dengan u tak pernah boring, always ada benda baru i belajar.</p>
+        </article>
+
+        <article class="reason-card">
+          <span class="reason-number">#11</span>
+          <div class="reason-icon">🫶</div>
+          <h3>benda kecil u buat</h3>
+          <p>u ingat benda-benda kecil yang i cakap, u check in bila i senyap, u perasan bila i off. those small things hit different.</p>
+        </article>
+
+        <article class="reason-card">
+          <span class="reason-number">#12</span>
+          <div class="reason-icon">🐱</div>
+          <h3>u soft walaupun act tough</h3>
+          <p>dalam semua kekasar u tu, u sebenarnya sangat lembut. and i think that contrast is one of the cutest things pasal u.</p>
+        </article>
+
+        <article class="reason-card">
+          <span class="reason-number">#13</span>
+          <div class="reason-icon">🌟</div>
+          <h3>u make me nak jadi lebih baik</h3>
+          <p>bukan sebab u push i, tapi sebab i think u deserve someone yang lagi better dari diri i yang sekarang and i need to improve myself to be that person.</p>
+        </article>
+
+        <article class="reason-card">
+          <span class="reason-number">#15</span>
+          <div class="reason-icon">🍳</div>
+          <h3>i nak rasa masakan u</h3>
+          <p>u selalu cakap pasal masak, and i really hope one day i dapat duduk meja makan and u hidang. that's the dream honestly.</p>
+        </article>
+
+        <article class="reason-card">
+          <span class="reason-number">#∞</span>
+          <div class="reason-icon">💍</div>
+          <h3>semua pasal u, honestly</h3>
+          <p>every version of u. yang happy, yang tired, yang noob main game, yang comel, yang baru bangun tido. i nak semua sekali otayy</p>
+        </article>
+
+      </div>
+
+    </main>
+
+    <footer>
+      <p>© <span id="year"></span> The list keeps growing ♡</p>
+    </footer>
+
+    <!-- AUDIO -->
+    <audio id="bg-audio" loop>
+      <source src="assets/music/wave to earth - love. (Official Lyric Video).mp3" type="audio/mpeg" />
+    </audio>
+
+    <!-- MUSIC PLAYER -->
+    <div class="music-player" id="music-player">
+      <button class="music-btn" id="music-btn" aria-label="Play music">
+        <span class="music-icon" id="music-icon">▶</span>
+      </button>
+      <div class="music-label">
+        <span class="music-title">love.</span>
+        <span class="music-artist">wave to earth</span>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
